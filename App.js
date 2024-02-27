@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, StyleSheet} from 'react-native';
+import Header from './Header';
+import PermitDetails from './PermitDetails';
+import Instructions from './Instructions';
+import Detail from './Detail';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Header title="Praying in the Noble Rawdah- Men" />
+      <Detail/>
+      <PermitDetails />
+      <Instructions />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: '#fafafa',
+  }
 });
+
+export default App;
